@@ -39,7 +39,7 @@ jobs:
               </style>
           </resources>
           EOF
-
+          sed -i 's#@style/AppTheme#@android:style/Theme.Material.Light.NoActionBar#g' "$PROJECT_DIR/app/src/main/AndroidManifest.xml"
       - name: Enable AndroidX
         run: |
           echo "android.useAndroidX=true" >> "$PROJECT_DIR/gradle.properties"
